@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/kurento.png" type="image/png" />
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/demo-console/index.css">
+    <link rel="stylesheet" href="bower_components/ekko-lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="css/kurento.css">
+
+    <script src="bower_components/webrtc-adapter/release/adapter.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/demo-console/index.js"></script>
+    <script src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+
+    <script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
+
+    <script src="js/index.js"></script>
+    <title>Kurento</title>
+  </head>
+  <body>     
+    <div class="container">
+      <div class="row">        
+        <div class="col-12">
+          <a id="customer" href="#" class="btn btn-success">
+            <span class="glyphicon glyphicon-play"></span> Customer</a>
+          <a id="supporter" href="#" class="btn btn-primary">
+            <span class="glyphicon glyphicon-user"></span> Supporter</a>
+          <a id="stop" href="#" class="btn btn-danger">
+            <span class="glyphicon glyphicon-stop"></span> Stop</a>
+        </div>               
+      </div> 
+      <div class="row">
+        <div class="col-12">
+          <label class="control-label" for="console">Console</label><br><br>
+          <div id="console" class="democonsole">
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div >
+          <form id="fileInfo">
+            <input type="file" id="fileInput" name="files"/>
+          </form>
+          <button disabled id="sendFile">Send</button>
+          <button disabled id="abortButton">Abort</button>
+        </div>
+
+        <div class="progress">
+          <div class="label">Send progress: </div>
+          <progress id="sendProgress" max="0" value="0"></progress>
+        </div>
+
+        <div class="progress">
+          <div class="label">Receive progress: </div>
+          <progress id="receiveProgress" max="0" value="0"></progress>
+        </div>
+        
+        <a id="download"></a>        
+      </div>
+      <!-- <div class="row">
+        <div class="col-5">          
+          <textarea id="dataChannelSend" placeholder="Enter the text to send"></textarea>
+        </div>
+        <div class="col-2">          
+          <a id="send" href="#" class="btn btn-success">
+            <span class="glyphicon glyphicon-forward"></span> Send</a>
+        </div>
+        <div class="col-5">          
+          <textarea id="dataChannelReceive" disabled></textarea>
+        </div>
+      </div>       -->
+    </div>
+  </body>
+</html>
